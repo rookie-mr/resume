@@ -1,0 +1,18 @@
+<?php
+	header('Content-Type:text/html');
+	$did=$_REQUEST['did'];
+	$conn=mysqli_connect('localhost','root','','jd',3306);
+	$sql='set names utf8';
+	mysqli_query($conn,$sql);
+	$sql = "SET NAMES UTF8";
+	mysqli_query($conn, $sql);
+
+	//SQL2：数据库更新语句
+	$sql = "DELETE FROM jd_cart_detail WHERE did='$did'";
+	$result = mysqli_query($conn,$sql);
+
+	if($result){
+		echo 'succ';
+	}else {
+		echo 'sqlerr';
+	}

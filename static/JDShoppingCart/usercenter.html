@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/jd.css">
+  <link rel="stylesheet" href="css/usercenter.css"/>
+</head>
+<body>
+<div id="header"></div>
+
+<div id="main">
+  <div class="affix">
+    <h4>用户中心</h4>
+    <ul>
+      <li class="active"><a href="#myorder">我的订单</a></li>
+      <li><a href="#canvas">消费统计(Canvas版)</a></li>
+      <li><a href="#svg">消费统计(SVG版)</a></li>
+      <li><a href="#lottery">幸运抽奖</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="active" id="myorder">
+      <table id="order-table">
+        <thead>
+        <tr>
+          <th>订单信息</th>
+          <th>收货人</th>
+          <th>订单金额</th>
+          <th>
+            <select name="" id="orderTime">
+              <option value="m1">最近一个月</option>
+              <option value="m2">最近三个月</option>
+              <option value="m3">最近六个月</option>
+            </select>
+          </th>
+          <th>
+            <select name="" id="">
+              <option value="0">全部状态</option>
+              <option value="1">待付款</option>
+              <option value="2">等待配送</option>
+              <option value="3">派货中</option>
+              <option value="4">全部状态</option>
+            </select>
+          </th>
+          <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="6">
+              订单编号：123456789
+              <span>京东自营</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href=""><img src="img/prod1.jpg" alt=""/></a>
+              <a href=""><img src="img/prod2.jpg" alt=""/></a>
+              <a href=""><img src="img/prod3.jpg" alt=""/></a>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <a href="#">查看</a>
+              <a href="#">评价</a>
+              <a href="#">晒单</a>
+              <a href="#">还要买</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="canvas">
+      <canvas id="canvas-buy-stat" style="background:#ddd">
+        您的浏览器不支持canvas标签
+      </canvas>
+    </div>
+    <div id="svg">
+      <div id="container-buy-stat-svg">
+      </div>
+    </div>
+    <div id="lottery">
+      <button id="bt-lottery" disabled>开始抽奖(总抽奖次数：0，剩余抽奖次数：0)</button>
+      <canvas id="canvas-lottery">
+        您的浏览器不支持canvas标签！
+      </canvas>
+    </div>
+  </div>
+</div>
+
+<div id="footer"></div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/usercenter.js"></script>
+<script src="js/fusioncharts.js"></script>
+<script src="js/fusioncharts.charts.js"></script>
+</body>
+</html>

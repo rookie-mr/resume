@@ -1,0 +1,919 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="index.css">
+ </head>
+ <body>
+	<div id="content">
+		<header>
+			<div id="login">
+				<p>Hi,请<a href="#">登录</a>/<a href="#">注册</a><i></i></p>
+				送货至
+				<div>北京<b></b></div>
+				<span><span>
+			</div>
+			<ul>
+				<li><a href="#">我的1号店<i></i></a></li>
+				<li><a href="#">收藏夹<i></i></a></li>
+				<li class="phone"><a href="#"><b></b>掌上1号店<i></i></a></li>
+				<li><a href="#">客户服务<i></i></a></li>
+				<li><a href="#">网站导航<i></i></a></li>
+				<li class="focusus">关注我们:<a href="#"><b></b></a><a href="#"><i></i></a></li>
+			</ul>
+		</header>
+		<nav>
+			<div id="top_banner"></div>
+			<p>
+				<div id="logo">
+					<img src="images/logo.png">
+					<img src="images/yhd.png">
+				</div>
+				<div id="search_box">
+					<p><a href="#">商品<b></b></a><input><button>搜索</button></p>
+					<div>
+						<a href="#">牙刷</a>
+						<a href="#">红枣</a>
+						<a href="#">牛肉</a>
+						<a href="#">洗发护发</a>
+						<a href="#">保温杯</a>
+						<a href="#">洗手液</a>
+						<a href="#">饼干</a>
+						<a href="#">牛排</a>
+						<a href="#">牙膏</a>
+						<a href="#">男士内裤</a>
+
+					</div>
+				</div>
+				<div id="aside">
+					<ul>
+						<li><a href="#"><b class="fl"></b>福利<i></i></a></li>
+						<li><a href="#"><b class="ddcx"></b>订单查询<i></i></a></li>
+						<li class="car"><a href="#"><span></span>购物车</a><u></u></li>
+					</ul>
+				</div>
+			</p>
+			<div id="items">
+				<div id="all">所有商品分类
+					<b></b>
+				</div>
+				<ul>
+					<li><a href="#" class="current">首页</a></li>
+					<li><a href="#" class="current">自营超市</a></li>
+					<li><a href="#" class="current">1号团</a></li>
+					<li><a href="#">1号商城</a></li>
+					<li><a href="#">闪购</a></li>
+					<li><a href="#">活色生香</a></li>
+					<li><a href="#">医药</a></li>
+					<li class="money">
+						<b></b>
+						<a href="#">1号钱包</a>
+					</li>
+					<li><a href="#">1号海购</a></li>
+				</ul>
+				<div class="gif"><img src="images/shouji_app.gif"></div>
+			</div>
+		</nav>
+		<div id="banner">
+			<div id="cate_box">
+				<ul>
+					<li>
+						<b></b>
+						<a href="#">进口食品、生鲜、海购</a>
+					</li>
+					<li>
+						<b></b>
+						<a href="#">食品、饮料、酒</a>
+					</li>
+					<li>
+						<b></b>
+						<a href="#">母婴、玩具、童装</a>
+					</li>
+					<li>
+						<b></b>
+						<a href="#">家居、家庭清洁、纸品</a>
+					</li>
+					<li>
+						<b></b>
+						<a href="#">美妆、个人护理、洗护</a>
+					</li>
+					<li>
+						<b></b>
+						<a href="#">女装、内衣、中老年</a>
+					</li>
+					<li>
+						<b></b>
+						<a href="#">鞋靴、箱包、腕表配饰</a>
+					</li>
+					<li>
+						<b></b>
+						<a href="#">男装、运动、户外健身</a>
+					</li>
+					<li>
+						<b></b>
+						<a href="#">手机、数码、电脑办公</a>
+					</li>
+					<li>
+						<b></b>
+						<a href="#">小家电、大家电、汽车</a>
+					</li>
+					<li>
+						<b></b>
+						<a href="#">保健、滋补、医药成人</a>
+					</li>
+					<li>
+						<b></b>
+						<a href="#">进口食品、生鲜、海购</a>
+					</li>
+				</ul>
+			</div>
+			<div id="pics">
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<aside>
+				<div>
+					<dl>
+						<dt><a href="#"><img src="images/CgQIz1R-6BKAQptVAAAQNRnH1f831500.jpg"></a></dt>
+						<dd>0元使用</dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/ChEbvFXmz-eAFmxCAAAJiX6DMEw48700.png"></a></dt>
+						<dd>积分商城</dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/CgQI01SmGqGASYS7AAANltWTOfM77700.jpg"></a></dt>
+						<dd>礼品卡</dd>
+					</dl>
+				</div>
+				<ul>
+					<li><a href="#">【公告】双十一配送公告</a></li>
+					<li><a href="#">【公告】商家规则修改公告</a></li>
+					<li><a href="#">【社区】秋冬全面抗干燥，四券齐发</a></li>
+				</ul>
+				<p>
+					<a href="#">话费快充</a>
+					<a href="#">彩票</a>
+					<a href="#">网游点卡</a>
+				</p>
+				<form>
+					<p>手机号码：<input value="请输入手机号码"></input></p>
+					<p class="rt">面值：<input value="100"></input></p>
+					<p class="rt">售价：&yen;<b>98.59-99.9</b></p>
+					<p><button>立即充值</button></p>
+				</form>
+			</aside>
+		</div>
+		<section>
+			<div class="adpics"><img src="images/chuchuangguangao.jpg"></div>
+			<div id="discount">
+				<ul>
+					<li><a href="#"><img src="images/cc1.jpg"></a></li>
+					<li>
+						<div>
+							<h3>进口·海购</h3>
+							海购双11 全球狂欢节
+							<img src="images/cc2up.jpg">
+						</div>
+						<div>
+							<h3>特产中国·全年底价</h3>
+							扬州狮子头
+							<img src="images/cc2down.jpg">
+						</div>
+					</li>
+					<li>
+						<div>
+							<h3>剁手价</h3>
+							威露士香皂4块
+							<img src="images/cc3up.jpg">
+						</div>
+						<div>
+							<h3>新品上市 0元试用</h3>
+							多芬 万份0元抢
+							<img src="images/cc3down.jpg">
+						</div>
+					</li>
+					<li><img src="images/cc4.jpg"></li>
+					<li>
+						<div>
+							<h3>手机家电城</h3>
+							iPhone6s 就比JD低
+							<img src="images/cc5up.jpg">
+						</div>
+						<div>
+							<h3>萌宝</h3>
+							巴拉巴拉超值买赠
+							<img src="images/cc5down.jpg">
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="adpics"><img src="images/CgQIzVY5uqKARO52AAC6RYeSyTc450.jpg"></div>
+			<div class="floor">
+				<div class="title">
+					<b>进口 · 海购</b>
+					<ul>
+						<li><a href="#">进口酒&nbsp;|&nbsp;</a></li>
+						<li><a href="#">进口冲饮&nbsp;|&nbsp;</a></li>
+						<li><a href="#">进口饮料&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购电器&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购保健&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购母婴</a></li>
+					</ul>
+				</div>
+				<div class="part1">
+					<ul>
+						<li><a href="#">进口牛奶</a></li>
+						<li><a href="#">进口饼干</a></li>
+						<li><a href="#">进口巧克力</a></li>
+						<li><a href="#">进口坚果</a></li>
+						<li><a href="#">进口咖啡</a></li>
+						<li><a href="#">进口粮油</a></li>
+					</ul>
+						<h3>双十一特惠来袭</h3>
+						<span>全场最高直降30元</span>
+						<img src="images/ChEi2lYwTDSAZezFAABWG0RiTyk831.jpg">
+					</div>
+				<div class="scroll_pic">
+					<img src="images/1f1.jpg">
+				</div>
+				<ul>
+					<li>
+						<div>
+							<p>“双11” 不止是五折</p>
+							<span>进口零食</span>
+							<div><img src="images/CgQIzVYzNVyAORTVAAAmiqEBMpE54000.jpg"></div>
+							<b></b>
+						</div>
+						<div>	
+							<p>甜蜜糖巧 不止是五折</p>
+							<span>进口糖巧品类中心</span>
+							<div><img src="images/ChEi1lY2x7eAEJw6AAAh-sUohrw44700.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+					<li>
+						<div  class="part2">
+							<p>海购双11 全球购物狂</p>
+							<span>来自纽约Coach的奢华礼遇</span>
+							<div><img src="images/CgQIzlY8Tg6ADrtTAABoispTBDE49700.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>海购保健</p>
+							<span>秋日防感冒 一杯VC可好</span>
+							<div><img src="images/CgQI0lY5gCqAWhEjAAA6FrsmYgc75300.jpg"></div>
+							<b></b>
+						</div>
+						<div>
+							<p>全球闪购</p>
+							<span>秋冬滋养 美体小铺双11专场</span>
+							<div><img src="images/ChEi1FYm_neAZtCwAAA65WtbkdE16300.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="floor">
+				<div class="title">
+					<b>进口 · 海购</b>
+					<ul>
+						<li><a href="#">进口酒&nbsp;|&nbsp;</a></li>
+						<li><a href="#">进口冲饮&nbsp;|&nbsp;</a></li>
+						<li><a href="#">进口饮料&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购电器&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购保健&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购母婴</a></li>
+					</ul>
+				</div>
+				<div class="part1">
+					<ul>
+						<li><a href="#">进口牛奶</a></li>
+						<li><a href="#">进口饼干</a></li>
+						<li><a href="#">进口巧克力</a></li>
+						<li><a href="#">进口坚果</a></li>
+						<li><a href="#">进口咖啡</a></li>
+						<li><a href="#">进口粮油</a></li>
+					</ul>
+						<h3>双十一特惠来袭</h3>
+						<span>全场最高直降30元</span>
+						<img src="images/ChEi2lYwTDSAZezFAABWG0RiTyk831.jpg">
+					</div>
+				<div class="scroll_pic">
+					<img src="images/1f1.jpg">
+				</div>
+				<ul>
+					<li>
+						<div>
+							<p>“双11” 不止是五折</p>
+							<span>进口零食</span>
+							<div><img src="images/CgQIzVYzNVyAORTVAAAmiqEBMpE54000.jpg"></div>
+							<b></b>
+						</div>
+						<div>	
+							<p>甜蜜糖巧 不止是五折</p>
+							<span>进口糖巧品类中心</span>
+							<div><img src="images/ChEi1lY2x7eAEJw6AAAh-sUohrw44700.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+					<li>
+						<div  class="part2">
+							<p>海购双11 全球购物狂</p>
+							<span>来自纽约Coach的奢华礼遇</span>
+							<div><img src="images/CgQIzlY8Tg6ADrtTAABoispTBDE49700.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>海购保健</p>
+							<span>秋日防感冒 一杯VC可好</span>
+							<div><img src="images/CgQI0lY5gCqAWhEjAAA6FrsmYgc75300.jpg"></div>
+							<b></b>
+						</div>
+						<div>
+							<p>全球闪购</p>
+							<span>秋冬滋养 美体小铺双11专场</span>
+							<div><img src="images/ChEi1FYm_neAZtCwAAA65WtbkdE16300.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="floor">
+				<div class="title">
+					<b>进口 · 海购</b>
+					<ul>
+						<li><a href="#">进口酒&nbsp;|&nbsp;</a></li>
+						<li><a href="#">进口冲饮&nbsp;|&nbsp;</a></li>
+						<li><a href="#">进口饮料&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购电器&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购保健&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购母婴</a></li>
+					</ul>
+				</div>
+				<div class="part1">
+					<ul>
+						<li><a href="#">进口牛奶</a></li>
+						<li><a href="#">进口饼干</a></li>
+						<li><a href="#">进口巧克力</a></li>
+						<li><a href="#">进口坚果</a></li>
+						<li><a href="#">进口咖啡</a></li>
+						<li><a href="#">进口粮油</a></li>
+					</ul>
+						<h3>双十一特惠来袭</h3>
+						<span>全场最高直降30元</span>
+						<img src="images/ChEi2lYwTDSAZezFAABWG0RiTyk831.jpg">
+					</div>
+				<div class="scroll_pic">
+					<img src="images/1f1.jpg">
+				</div>
+				<ul>
+					<li>
+						<div>
+							<p>“双11” 不止是五折</p>
+							<span>进口零食</span>
+							<div><img src="images/CgQIzVYzNVyAORTVAAAmiqEBMpE54000.jpg"></div>
+							<b></b>
+						</div>
+						<div>	
+							<p>甜蜜糖巧 不止是五折</p>
+							<span>进口糖巧品类中心</span>
+							<div><img src="images/ChEi1lY2x7eAEJw6AAAh-sUohrw44700.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+					<li>
+						<div  class="part2">
+							<p>海购双11 全球购物狂</p>
+							<span>来自纽约Coach的奢华礼遇</span>
+							<div><img src="images/CgQIzlY8Tg6ADrtTAABoispTBDE49700.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>海购保健</p>
+							<span>秋日防感冒 一杯VC可好</span>
+							<div><img src="images/CgQI0lY5gCqAWhEjAAA6FrsmYgc75300.jpg"></div>
+							<b></b>
+						</div>
+						<div>
+							<p>全球闪购</p>
+							<span>秋冬滋养 美体小铺双11专场</span>
+							<div><img src="images/ChEi1FYm_neAZtCwAAA65WtbkdE16300.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="floor" id="ghcw">
+				<div class="title">
+					<b>个护厨卫</b>
+					<ul>
+						<li><a href="#">进口酒&nbsp;|&nbsp;</a></li>
+						<li><a href="#">进口冲饮&nbsp;|&nbsp;</a></li>
+						<li><a href="#">进口饮料&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购电器&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购保健&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购母婴</a></li>
+					</ul>
+				</div>
+				<div class="part1">
+					<ul>
+						<li><a href="#">进口牛奶</a></li>
+						<li><a href="#">进口饼干</a></li>
+						<li><a href="#">进口巧克力</a></li>
+						<li><a href="#">进口坚果</a></li>
+						<li><a href="#">进口咖啡</a></li>
+						<li><a href="#">进口粮油</a></li>
+					</ul>
+					<div class="lf_up">
+						<h3>双十一特惠来袭</h3>
+						<span>全场最高直降30元</span>
+						<img src="images/ChEi2lYwTDSAZezFAABWG0RiTyk831.jpg">
+					</div>
+					<div class="lf_down">
+						<h3>双十一特惠来袭</h3>
+						<span>全场最高直降30元</span>
+						<img src="images/.jpg">
+					</div>
+				</div>
+				<div class="scroll_pic">
+					<img src="images/ChEi11ZJQ9qAfIQWAACGniSOL_g87900.jpg">
+					<div>
+						<p>“双11” 不止是五折</p>
+						<span>进口零食</span>
+						<div><img src="images/CgQIzVYzNVyAORTVAAAmiqEBMpE54000.jpg"></div>
+						<b></b>
+					</div>
+				</div>
+				<ul>
+					<li>
+						<div>
+							<p>“双11” 不止是五折</p>
+							<span>进口零食</span>
+							<div><img src="images/CgQIzVYzNVyAORTVAAAmiqEBMpE54000.jpg"></div>
+							<b></b>
+						</div>
+						<div>	
+							<p>甜蜜糖巧 不止是五折</p>
+							<span>进口糖巧品类中心</span>
+							<div><img src="images/ChEi1lY2x7eAEJw6AAAh-sUohrw44700.jpg"></div>
+							<b></b>
+						</div>
+						<div>	
+							<p>甜蜜糖巧 不止是五折</p>
+							<span>进口糖巧品类中心</span>
+							<div><img src="images/ChEi1lY2x7eAEJw6AAAh-sUohrw44700.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+					<li>
+						<div class="part2">
+							<p>海购双11 全球购物狂</p>
+							<span>来自纽约Coach的奢华礼遇</span>
+							<div><img src="images/CgQIzlY8Tg6ADrtTAABoispTBDE49700.jpg"></div>
+							<b></b>
+						</div>
+						<div>
+							<p>全球闪购</p>
+							<span>秋冬滋养 美体小铺双11专场</span>
+							<div><img src="images/ChEi1FYm_neAZtCwAAA65WtbkdE16300.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>海购保健</p>
+							<span>秋日防感冒 一杯VC可好</span>
+							<div><img src="images/CgQI0lY5gCqAWhEjAAA6FrsmYgc75300.jpg"></div>
+							<b></b>
+						</div>
+						<div class="part2">
+							<p>海购双11 全球购物狂</p>
+							<span>来自纽约Coach的奢华礼遇</span>
+							<div><img src="images/CgQIzlY8Tg6ADrtTAABoispTBDE49700.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="floor" id="ghcw">
+				<div class="title">
+					<b>个护厨卫</b>
+					<ul>
+						<li><a href="#">进口酒&nbsp;|&nbsp;</a></li>
+						<li><a href="#">进口冲饮&nbsp;|&nbsp;</a></li>
+						<li><a href="#">进口饮料&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购电器&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购保健&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购母婴</a></li>
+					</ul>
+				</div>
+				<div class="part1">
+					<ul>
+						<li><a href="#">进口牛奶</a></li>
+						<li><a href="#">进口饼干</a></li>
+						<li><a href="#">进口巧克力</a></li>
+						<li><a href="#">进口坚果</a></li>
+						<li><a href="#">进口咖啡</a></li>
+						<li><a href="#">进口粮油</a></li>
+					</ul>
+					<div class="lf_up">
+						<h3>双十一特惠来袭</h3>
+						<span>全场最高直降30元</span>
+						<img src="images/ChEi2lYwTDSAZezFAABWG0RiTyk831.jpg">
+					</div>
+					<div class="lf_down">
+						<h3>双十一特惠来袭</h3>
+						<span>全场最高直降30元</span>
+						<img src="images/.jpg">
+					</div>
+				</div>
+				<div class="scroll_pic">
+					<img src="images/ChEbulZFSdWALU9xAAC5OSAQfpc454.jpg">
+					<div>
+						<p>“双11” 不止是五折</p>
+						<span>进口零食</span>
+						<div><img src="images/CgQIzVYzNVyAORTVAAAmiqEBMpE54000.jpg"></div>
+						<b></b>
+					</div>
+				</div>
+				<ul>
+					<li>
+						<div>
+							<p>“双11” 不止是五折</p>
+							<span>进口零食</span>
+							<div><img src="images/CgQIzVYzNVyAORTVAAAmiqEBMpE54000.jpg"></div>
+							<b></b>
+						</div>
+						<div>	
+							<p>甜蜜糖巧 不止是五折</p>
+							<span>进口糖巧品类中心</span>
+							<div><img src="images/ChEi1lY2x7eAEJw6AAAh-sUohrw44700.jpg"></div>
+							<b></b>
+						</div>
+						<div>	
+							<p>甜蜜糖巧 不止是五折</p>
+							<span>进口糖巧品类中心</span>
+							<div><img src="images/ChEi1lY2x7eAEJw6AAAh-sUohrw44700.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+					<li>
+						<div class="part2">
+							<p>海购双11 全球购物狂</p>
+							<span>来自纽约Coach的奢华礼遇</span>
+							<div><img src="images/CgQIzlY8Tg6ADrtTAABoispTBDE49700.jpg"></div>
+							<b></b>
+						</div>
+						<div>
+							<p>全球闪购</p>
+							<span>秋冬滋养 美体小铺双11专场</span>
+							<div><img src="images/ChEi1FYm_neAZtCwAAA65WtbkdE16300.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>海购保健</p>
+							<span>秋日防感冒 一杯VC可好</span>
+							<div><img src="images/CgQI0lY5gCqAWhEjAAA6FrsmYgc75300.jpg"></div>
+							<b></b>
+						</div>
+						<div class="part2">
+							<p>海购双11 全球购物狂</p>
+							<span>来自纽约Coach的奢华礼遇</span>
+							<div><img src="images/CgQIzlY8Tg6ADrtTAABoispTBDE49700.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="floor" id="ghcw">
+				<div class="title">
+					<b>个护厨卫</b>
+					<ul>
+						<li><a href="#">进口酒&nbsp;|&nbsp;</a></li>
+						<li><a href="#">进口冲饮&nbsp;|&nbsp;</a></li>
+						<li><a href="#">进口饮料&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购电器&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购保健&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购母婴</a></li>
+					</ul>
+				</div>
+				<div class="part1">
+					<ul>
+						<li><a href="#">进口牛奶</a></li>
+						<li><a href="#">进口饼干</a></li>
+						<li><a href="#">进口巧克力</a></li>
+						<li><a href="#">进口坚果</a></li>
+						<li><a href="#">进口咖啡</a></li>
+						<li><a href="#">进口粮油</a></li>
+					</ul>
+					<div class="lf_up">
+						<h3>双十一特惠来袭</h3>
+						<span>全场最高直降30元</span>
+						<img src="images/ChEi2lYwTDSAZezFAABWG0RiTyk831.jpg">
+					</div>
+					<div class="lf_down">
+						<h3>双十一特惠来袭</h3>
+						<span>全场最高直降30元</span>
+						<img src="images/.jpg">
+					</div>
+				</div>
+				<div class="scroll_pic">
+					<img src="images/ChEi11ZJQ9qAfIQWAACGniSOL_g87900.jpg">
+					<div>
+						<p>“双11” 不止是五折</p>
+						<span>进口零食</span>
+						<div><img src="images/CgQIzVYzNVyAORTVAAAmiqEBMpE54000.jpg"></div>
+						<b></b>
+					</div>
+				</div>
+				<ul>
+					<li>
+						<div>
+							<p>“双11” 不止是五折</p>
+							<span>进口零食</span>
+							<div><img src="images/CgQIzVYzNVyAORTVAAAmiqEBMpE54000.jpg"></div>
+							<b></b>
+						</div>
+						<div>	
+							<p>甜蜜糖巧 不止是五折</p>
+							<span>进口糖巧品类中心</span>
+							<div><img src="images/ChEi1lY2x7eAEJw6AAAh-sUohrw44700.jpg"></div>
+							<b></b>
+						</div>
+						<div>	
+							<p>甜蜜糖巧 不止是五折</p>
+							<span>进口糖巧品类中心</span>
+							<div><img src="images/ChEi1lY2x7eAEJw6AAAh-sUohrw44700.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+					<li>
+						<div class="part2">
+							<p>海购双11 全球购物狂</p>
+							<span>来自纽约Coach的奢华礼遇</span>
+							<div><img src="images/ChEi2lZAM3uAYsS7AABB3LEZj0E23700.jpg"></div>
+							<b></b>
+						</div>
+						<div>
+							<p>全球闪购</p>
+							<span>秋冬滋养 美体小铺双11专场</span>
+							<div><img src="images/ChEi1FYm_neAZtCwAAA65WtbkdE16300.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p>海购保健</p>
+							<span>秋日防感冒 一杯VC可好</span>
+							<div><img src="images/CgQI0lY5gCqAWhEjAAA6FrsmYgc75300.jpg"></div>
+							<b></b>
+						</div>
+						<div class="part2">
+							<p>海购双11 全球购物狂</p>
+							<span>来自纽约Coach的奢华礼遇</span>
+							<div><img src="images/ChEi2lZAM3uAYsS7AABB3LEZj0E23700.jpg"></div>
+							<b></b>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="floor">
+				<div class="title">
+					<b>1号团</b>
+					<ul>
+						<li><a href="#">进口酒&nbsp;|&nbsp;</a></li>
+						<li><a href="#">进口冲饮&nbsp;|&nbsp;</a></li>
+						<li><a href="#">进口饮料&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购电器&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购保健&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购母婴</a></li>
+					</ul>
+				</div>
+				<div class="part1">
+					<ul>
+						<li><a href="#">进口牛奶</a></li>
+						<li><a href="#">进口饼干</a></li>
+						<li><a href="#">进口巧克力</a></li>
+						<li><a href="#">进口坚果</a></li>
+						<li><a href="#">进口咖啡</a></li>
+						<li><a href="#">进口粮油</a></li>
+					</ul>
+						<h3>万人免单</h3>
+						<span>全场最高直降30元</span>
+						<img src="images/ChEi2lYwTDSAZezFAABWG0RiTyk831.jpg">
+					</div>
+				<div class="scroll_pic">
+					<p>
+						<img src="images/ChEi2lZDAPOACMBaAABWzJuY0yc22100.jpg">
+					</p>
+					<p>
+						<img src="images/ChEbu1ZDAY-AFhowAACQblT72Xw36200.jpg">
+					</p>
+				</div>
+				<ul>
+					<li>
+						<div>
+							<div><img src="images/CgQIzVYzNVyAORTVAAAmiqEBMpE54000.jpg"></div>
+							<p>“双11” 不止是五折</p>
+							<span>进口零食</span>
+						</div>
+						<div>	
+							<div><img src="images/ChEi1lY2x7eAEJw6AAAh-sUohrw44700.jpg"></div>
+							<p>甜蜜糖巧 不止是五折</p>
+							<span>进口糖巧品类中心</span>
+						</div>
+					</li>
+					<li>
+						<div>
+							<div><img src="images/ChEbvFZDNNSAIZsGAAIYivlEgmI45600_120x120.jpg"></div>
+							<p>海购双11 全球购物狂</p>
+							<span>来自纽约Coach的奢华礼遇</span>
+						</div>
+						<div>
+							<div><img src="images/CgQI01ZDMR2ABNCfAAAJm9-LzW459700_120x120.jpg"></div>
+							<p>海购双11 全球购物狂</p>
+							<span>来自纽约Coach的奢华礼遇</span>
+						</div>
+					</li>
+					<li>
+						<div>
+							<div><img src="images/CgQI0lY5gCqAWhEjAAA6FrsmYgc75300.jpg"></div>
+							<p>海购保健</p>
+							<span>秋日防感冒 一杯VC可好</span>
+						</div>
+						<div>
+							<div><img src="images/ChEi1FYm_neAZtCwAAA65WtbkdE16300.jpg"></div>
+							<p>全球闪购</p>
+							<span>秋冬滋养 美体小铺双11专场</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="floor">
+				<div class="title">
+					<b>1号团</b>
+					<ul>
+						<li><a href="#">进口酒&nbsp;|&nbsp;</a></li>
+						<li><a href="#">进口冲饮&nbsp;|&nbsp;</a></li>
+						<li><a href="#">进口饮料&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购电器&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购保健&nbsp;|&nbsp;</a></li>
+						<li><a href="#">海购母婴</a></li>
+					</ul>
+				</div>
+				<div class="scroll_pic">
+					<img src="images/CgQIzlZCBvGACD7DAACzhNQ0M1019400.jpg">
+				</div>
+				<ul>
+					<li>
+						<div class="part3">
+							<img src="images/ChEbvFZC6nuAUPNQAADElzHA3YU28500.jpg">
+						</div>
+					</li>
+					<li>
+						<div class="part3">
+							<img src="images/ChEbvFZDLGGARadNAAB2frMl1G890300.jpg">
+						</div>
+					</li>
+					<li>
+						<div class="part3">
+							<img src="images/CgQIzVZDOeKAaTwsAACv9gdS4lE97800.jpg">
+						</div>
+					</li>
+					<li>
+						<div class="part3">
+							<img src="images/ChEi21ZD_DOABh8oAAB1nVK_kCI14300.jpg">
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div id="">
+			<div id="">
+		</section>
+		<footer>
+			<div>
+				<ul id="promise">
+					<li>
+						<img src="images/CgQI0lWskgmADBnsAAAPZvcSh3E68900.jpg.png">
+						<div><b>正品保证</b>正品行货，放心选购</div>
+					</li>
+					<li>
+						<img src="images/ChEbulWsk4iADa_aAAAM544hHN818600.jpg.png">
+						<div><b>正品保证</b>正品行货，放心选购</div>
+					</li>
+					<li>
+						<img src="images/CgQIz1WslI-Adao3AAAN5b_ut2I80100.jpg.png">
+						<div><b>正品保证</b>正品行货，放心选购</div>
+					</li>
+					<li>
+						<img src="images/ChEi11WsyiyALBbiAAAN9lEEK5M33200.jpg.png">
+						<div><b>正品保证</b>正品行货，放心选购</div>
+					</li>
+				</ul>
+			<div>
+			<div id="others">
+				<ul>
+					<li class="title"><a href="#">新手入门</a></li>
+					<li><a href="#">购物流程</a></li>
+					<li><a href="#">会员制度</a></li>
+					<li><a href="#">订单查询</a></li>
+					<li><a href="#">发票制度</a></li>
+					<li><a href="#">常见问题</a></li>
+				</ul>
+				<ul>
+					<li class="title"><a href="#">新手入门</a></li>
+					<li><a href="#">购物流程</a></li>
+					<li><a href="#">会员制度</a></li>
+					<li><a href="#">订单查询</a></li>
+					<li><a href="#">发票制度</a></li>
+					<li><a href="#">常见问题</a></li>
+				</ul>
+				<ul>
+					<li class="title"><a href="#">新手入门</a></li>
+					<li><a href="#">购物流程</a></li>
+					<li><a href="#">会员制度</a></li>
+					<li><a href="#">订单查询</a></li>
+					<li><a href="#">发票制度</a></li>
+					<li><a href="#">常见问题</a></li>
+				</ul>
+
+				<ul>
+					<li class="title"><a href="#">新手入门</a></li>
+					<li><a href="#">购物流程</a></li>
+					<li><a href="#">会员制度</a></li>
+					<li><a href="#">订单查询</a></li>
+					<li><a href="#">发票制度</a></li>
+					<li><a href="#">常见问题</a></li>
+				</ul>
+				<ul>
+					<li class="title"><a href="#">新手入门</a></li>
+					<li><a href="#">购物流程</a></li>
+					<li><a href="#">会员制度</a></li>
+					<li><a href="#">订单查询</a></li>
+					<li><a href="#">发票制度</a></li>
+					<li><a href="#">常见问题</a></li>
+				</ul>
+				<div>
+					<h3><a href="#">1号店客户端</a></h3>
+					<img src="images/CgQCr1KW1juAFH9YAAAatCrcuRI48200.png">
+				</div>
+				<div>
+					<h3><a href="#">1号店微信</a></h3>
+					<img src="images/CgQCtlKW1RSAe6dIAAAcun_R_Wk58300.jpg">
+				</div>
+			</div>
+			<p class="extra_nav">
+				<a href="#">关于1号店</a><b></b>
+				<a href="#">我们的团队</a><b></b>
+				<a href="#">网站联盟</a><b></b>
+				<a href="#">热门搜索</a><b></b>
+				<a href="#">友站连接</a><b></b>
+				<a href="#">1号店社区</a><b></b>
+				<a href="#">诚征英才</a><b></b>
+				<a href="#">商家登录</a><b></b>
+				<a href="#">供应登录</a><b></b>
+				<a href="#">放心搜</a><b></b>
+				<a href="#">1号店新品</a><b></b>
+				<a href="#">开放平台</a><b></b>
+				<a href="#">沃尔玛</a>
+			</p>
+			<p class="extra_nav">
+				<a href="#">沪ICP备13044278号</a><b></b>
+				<a href="#">合字B1 B2-20130004</a><b></b>
+				<a href="#">营业执照</a><b></b>
+				<a href="#">互联网药品信息服务资格证</a><b></b>
+				<a href="#">互联网药品交易服务资格证</a>
+			</p>
+			<p><a>Copyright&copy; 1号店网上超市 2007-2015，All Rights Reserved</a></p>
+			<p class="links">
+				<a href="#"><img src="images/CgMBmVDzwyaAaIMBAAAJZgSEr6I65200.jpg.gif"></a>
+				<a href="#"><img src="images/CgQCr1Dzwj2AVUL0AAA-ic2BxNw39500.jpg"></a>
+				<a href="#"><img src="images/CgQCrlDzwnKAUkfSAAAIPrrML6M92400.jpg.gif"></a>
+				<a href="#"><img src="images/CgQCsVDzw0GABUElAADHlvRfNUk94600.jpg.png"></a>
+				<a href="#"><img src="images/CgMBmVLfYZGALWNHAAAOxFbda9472600.gif"></a>
+				<a href="#"><img src="images/CgMBmVLfYZGALWNHAAAOxFbda9472600.gif"></a>
+				<a href="#"><img src="images/CgQCrlPYTqCASlHXAAAd82JE0eA31000.png"></a>
+				<a href="#"><img src="images/ChEi1FYXHcOAVk_WAAAL2r2-yfo10200.jpg"></a>
+				<a href="#"><img src="images/CgQI0lXmj5iAPoZJAAAMUQgIYEc49100.jpg"></a>
+			</p>
+		</footer>
+	</div>
+ </body>
+</html>

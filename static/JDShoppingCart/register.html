@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>用户注册</title>
+  <link rel="icon" href="img/favicon.ico"/>
+  <link rel="stylesheet" href="css/register.css"/>
+</head>
+<body>
+  <div id="container">
+    <div id="logo"><span><img src="images/logo-201305.png"/></span>欢迎注册</div>
+    <video src="data/snow.mp4" width="100%" autoplay loop></video>
+    <div id="reg">
+      <div class="panel">
+        <form id="form-register">
+          <div class="form-group">
+            <label for="uname">用户名：</label>
+            <input required minlength="6" maxlength="9" type="text" placeholder="请输入用户名" autofocus name="uname" id="uname"/>
+            <span class="msg-default">用户名长度在6到9位之间</span>
+          </div>
+          <div class="form-group">
+            <label for="upwd">密码：</label>
+            <input type="password" placeholder="请输入密码" name="upwd" id="upwd"/>
+            <span class="msg-default hidden">密码长度在6到12位之间</span>
+          </div>
+          <div class="form-group">
+            <label for="umail">邮箱：</label>
+            <input required type="email" placeholder="请输入邮箱地址" name="umail" id="umail"/>
+            <span class="msg-default hidden">请输入合法的邮箱地址</span>
+          </div>
+          <div class="form-group">
+            <label for="homepage">个人主页：</label>
+            <input required type="url" placeholder="请输入个人网页" name="homepage" id="homepage"/>
+            <span class="msg-default hidden">请输入合法的主页地址</span>
+          </div>
+          <div class="form-group">
+            <label for="age">年龄：</label>
+            <input required type="text" placeholder="请输入年龄" name="age" id="age" min="18" max="60"/>
+            <span class="msg-default hidden">请输入年龄</span>
+          </div>
+          <div class="form-group">
+            <label for="birthday">生日：</label>
+            <input required type="date" placeholder="请输入生日" name="birthday" id="birthday"/>
+            <span class="msg-default hidden">请输入你的生日</span>
+          </div>
+          <div class="form-group">
+            <label></label>
+            <input type="button" id="bt-register" >
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>

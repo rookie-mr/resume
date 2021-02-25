@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>首页</title>
+  <link rel="stylesheet" href="https://unpkg.com/todomvc-app-css@2.0.4/index.css">
+  <script src="https://unpkg.com/director@1.2.8/build/director.js"></script>
+  <style>
+    body {
+      max-width: 100%;
+    }
+
+    [v-cloak] {
+      display: none;
+    }
+  </style>
+  <style>
+    .flex {
+      display: flex;
+    }
+
+    .flex-item {
+      border: 1px solid #ccc;
+      padding: 0 20px;
+    }
+
+    .flex-grow-1 {
+      flex-grow: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <h3>{{ title }}</h3>
+    <div class="flex">
+      <div class="flex-item">
+        <h4>待通知名单:</h4>
+        <h5>小学</h5>
+        <ul>
+          <li v-for="item in PrimarySchool" :key="item">{{item}}</li>
+        </ul>
+        <h5>高中</h5>
+        <ul>
+          <li v-for="item in HighSchool" :key="item">{{item}}</li>
+        </ul>
+        <h5>大学</h5>
+        <ul>
+          <li v-for="item in University" :key="item">{{item}}</li>
+        </ul>
+      </div>
+      <div class="flex-item">
+        <h4>预借车名单:</h4>
+        <ul>
+          <li v-for="item in BorrowCar" :key="item">{{item}}</li>
+        </ul>
+      </div>
+      <div class="flex-item">
+        <h4>待购列表:</h4>
+        <ul>
+          <li v-for="item in Pending" :key="item">{{item}}</li>
+        </ul>
+      </div>
+      <div class="flex-item flex-grow-1">
+        <section class="todoapp">
+          <header class="header">
+            <h1>todos</h1>
+            <input class="new-todo" autofocus autocomplete="off" placeholder="What needs to be done?" v-model="newTodo"
+              @keyup.enter="addTodo">
+          </header>
+          <section class="main" v-show="todos.length" v-cloak>
+            <input class="toggle-all" type="checkbox" v-model="allDone">
+            <ul class="todo-list">
+              <li v-for="todo in filteredTodos" class="todo" :key="todo.id"
+                :class="{ completed: todo.completed, editing: todo == editedTodo }">
+                <div class="view">
+                  <input class="toggle" type="checkbox" v-model="todo.completed">
+                  <label @dblclick="editTodo(todo)">{{ todo.title }}</label>
+                  <button class="destroy" @click="removeTodo(todo)"></button>
+                </div>
+                <input class="edit" type="text" v-model="todo.title" v-todo-focus="todo == editedTodo"
+                  @blur="doneEdit(todo)" @keyup.enter="doneEdit(todo)" @keyup.esc="cancelEdit(todo)">
+              </li>
+            </ul>
+          </section>
+          <footer class="footer" v-show="todos.length" v-cloak>
+            <span class="todo-count">
+              <strong>{{ remaining }}</strong> {{ remaining | pluralize }} left
+            </span>
+            <ul class="filters">
+              <li><a href="#/all" :class="{ selected: visibility == 'all' }">All</a></li>
+              <li><a href="#/active" :class="{ selected: visibility == 'active' }">Active</a></li>
+              <li><a href="#/completed" :class="{ selected: visibility == 'completed' }">Completed</a></li>
+            </ul>
+            <button class="clear-completed" @click="removeCompleted" v-show="todos.length > remaining">
+              Clear completed
+            </button>
+          </footer>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="../scripts/vue.js"></script>
+  <script>
+    if (navigator.userAgent.indexOf('PhantomJS') > -1) localStorage.clear()
+  </script>
+  <script>
+    // Full spec-compliant TodoMVC with localStorage persistence
+    // and hash-based routing in ~150 lines.
+
+    // localStorage persistence
+    var STORAGE_KEY = 'todos-vuejs-2.0'
+    var todoStorage = {
+      fetch: function () {
+        var todos = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
+        todos.forEach(function (todo, index) {
+          todo.id = index
+        })
+        todoStorage.uid = todos.length
+        return todos
+      },
+      save: function (todos) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(todos))
+      }
+    }
+
+    // visibility filters
+    var filters = {
+      all: function (todos) {
+        return todos
+      },
+      active: function (todos) {
+        return todos.filter(function (todo) {
+          return !todo.completed
+        })
+      },
+      completed: function (todos) {
+        return todos.filter(function (todo) {
+          return todo.completed
+        })
+      }
+    }
+
+    // app Vue instance
+    var app = new Vue({
+      // app initial state
+      data: {
+        todos: todoStorage.fetch(),
+        newTodo: '',
+        editedTodo: null,
+        visibility: 'all',
+
+        title: 'To Do List',
+        PrimarySchool: ['皓楠', '科达', '旺旺', '腾腾', '凯聪', '子叶', '海鑫', '浩亮', '学科', '晓康', '文博', '海伟', '威威', '牛星', '旭阳', '少楠'],
+        HighSchool: ['刘雨佳', '王任轩', '宋晓明', '戴冰'],
+        University: ['代云舟', '刘少新', '秦元磊', '张泽轩', '王惜华'],
+        BorrowCar: ['科达', '腾腾', '学科', '浩亮', '凯聪', '子叶', '少楠'],
+        Pending: ['伴手礼', '装饰品', '气球', '打印照片']
+      },
+
+      // watch todos change for localStorage persistence
+      watch: {
+        todos: {
+          handler: function (todos) {
+            todoStorage.save(todos)
+          },
+          deep: true
+        }
+      },
+
+      // computed properties
+      // https://vuejs.org/guide/computed.html
+      computed: {
+        filteredTodos: function () {
+          return filters[this.visibility](this.todos)
+        },
+        remaining: function () {
+          return filters.active(this.todos).length
+        },
+        allDone: {
+          get: function () {
+            return this.remaining === 0
+          },
+          set: function (value) {
+            this.todos.forEach(function (todo) {
+              todo.completed = value
+            })
+          }
+        }
+      },
+
+      filters: {
+        pluralize: function (n) {
+          return n === 1 ? 'item' : 'items'
+        }
+      },
+
+      // methods that implement data logic.
+      // note there's no DOM manipulation here at all.
+      methods: {
+        addTodo: function () {
+          var value = this.newTodo && this.newTodo.trim()
+          if (!value) {
+            return
+          }
+          this.todos.push({
+            id: todoStorage.uid++,
+            title: value,
+            completed: false
+          })
+          this.newTodo = ''
+        },
+
+        removeTodo: function (todo) {
+          this.todos.splice(this.todos.indexOf(todo), 1)
+        },
+
+        editTodo: function (todo) {
+          this.beforeEditCache = todo.title
+          this.editedTodo = todo
+        },
+
+        doneEdit: function (todo) {
+          if (!this.editedTodo) {
+            return
+          }
+          this.editedTodo = null
+          todo.title = todo.title.trim()
+          if (!todo.title) {
+            this.removeTodo(todo)
+          }
+        },
+
+        cancelEdit: function (todo) {
+          this.editedTodo = null
+          todo.title = this.beforeEditCache
+        },
+
+        removeCompleted: function () {
+          this.todos = filters.active(this.todos)
+        }
+      },
+
+      // a custom directive to wait for the DOM to be updated
+      // before focusing on the input field.
+      // https://vuejs.org/guide/custom-directive.html
+      directives: {
+        'todo-focus': function (el, binding) {
+          if (binding.value) {
+            el.focus()
+          }
+        }
+      }
+    })
+
+    // handle routing
+    function onHashChange() {
+      var visibility = window.location.hash.replace(/#\/?/, '')
+      if (filters[visibility]) {
+        app.visibility = visibility
+      } else {
+        window.location.hash = ''
+        app.visibility = 'all'
+      }
+    }
+
+    window.addEventListener('hashchange', onHashChange)
+    onHashChange()
+
+    // mount
+    app.$mount('#app')
+  </script>
+</body>
+
+</html>

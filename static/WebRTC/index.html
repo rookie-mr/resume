@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Web RTC</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h3>{{ title }}</h3>
+        <video id="rtcA" controls autoplay="true"></video>
+        <video id="rtcB" controls autoplay="true"></video>
+    </div>
+
+    <script src="../scripts/vue.js"></script>
+    <script>
+        const socket = io('http://127.0.0.1:80')
+        socket.send('zhanggp', (res) => {console.log(res)})
+        // 判断是否有 navigator.mediaDevices，没有赋成空对象
+        if (navigator.mediaDevices === undefined) {
+            navigator.mediaDevices = {};
+        }
+
+        // 继续判断是否有 navigator.mediaDevices.getUserMedia，没有就采用 navigator.getUserMedia
+        if (navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia = function (prams) {
+                let getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+                // 兼容获取
+                if (!getUserMedia) {
+                    return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+                }
+                return new Promise(function (resolve, reject) {
+                    getUserMedia.call(navigator, prams, resolve, reject);
+                });
+            };
+        }
+        const app = new Vue({
+            el: "#app",
+            data() {
+                return {
+                    title: 'A Simple Web RTC',
+                    localstream: null,
+                    peerA: null,
+                    peerB: null
+                }
+            },
+            methods: {
+                async createMedia() {
+                    // 保存本地流到全局
+                    this.localstream = await navigator.mediaDevices.getUserMedia({ audio: true, video: true })
+                    let video = document.querySelector('#rtcA')
+                    if ('srcObject' in video) { // 判断是否支持 srcObject 属性
+                        video.srcObject = this.localstream
+                    } else {
+                        video.src = window.URL.createObjectURL(this.localstream);
+                    }
+                    video.onloadedmetadata = function (e) {
+                        video.play()
+                    }
+                    this.initPeer() // 获取到媒体流后，调用函数初始化 RTCPeerConnection
+                },
+                PeerConnection: function (o) {
+                    const PeerConnection = window.RTCPeerConnection ||
+                        window.mozRTCPeerConnection ||
+                        window.webkitRTCPeerConnection
+                    return new PeerConnection(o)
+                },
+                initPeer() {
+                    this.peerA = this.PeerConnection({
+                        iceServers: [
+                            { url: "stun:stun.l.google.com:19302" }, // 谷歌的公共服务
+                            {
+                                url: "turn:***",
+                                username: '***', // 用户名
+                                credential: '***' // 密码
+                            }
+                        ]
+                    })
+                    this.peerB = this.PeerConnection({
+                        iceServers: [
+                            { url: "stun:stun.l.google.com:19302" }, // 谷歌的公共服务
+                            {
+                                url: "turn:***",
+                                username: '***', // 用户名
+                                credential: '***' // 密码
+                            }
+                        ]
+                    })
+                    console.log(this.peerA)
+                    this.peerA.oniceconnectionstatechange = (event) => {
+                        console.log('ICE connection state change: ' + event.target.iceConnectionState);
+                    }
+                    this.peerB.oniceconnectionstatechange = (event) => {
+                        console.log('ICE connection state change: ' + event.target.iceConnectionState);
+                    }
+                    this.peerA.addStream(this.localstream) // 添加本地流
+                    this.peerA.onicecandidate = (event) => {
+                        console.log(event)
+                        // 监听 A 的ICE候选信息 如果收集到，就添加给 B 连接状态
+                        if (event.candidate) {
+                            this.peerB.addIceCandidate(event.candidate)
+                        }
+                    }
+
+                    // 监听是否有媒体流接入，如果有就赋值给 rtcB 的 src
+                    this.peerB.onaddstream = (event) => {
+                        console.log(event)
+                        let video = document.querySelector('#rtcB')
+                        if ('srcObject' in video) { // 判断是否支持 srcObject 属性
+                            video.srcObject = event.stream
+                        } else {
+                            video.src = window.URL.createObjectURL(event.stream);
+                        }
+                    }
+                    this.peerB.onicecandidate = (event) => {
+                        console.log(event)
+                        // 连接状态
+                        // 监听 B 的ICE候选信息 如果收集到，就添加给 A
+                        if (event.candidate) {
+                            this.peerA.addIceCandidate(event.candidate)
+                        }
+                    }
+                }
+            },
+            created: function () {
+
+            },
+            mounted: function () {
+                this.createMedia()
+            }
+        })
+    </script>
+</body>
+
+</html>

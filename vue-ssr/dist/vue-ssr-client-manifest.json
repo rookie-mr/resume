@@ -1,0 +1,21 @@
+{
+  "publicPath": "auto",
+  "all": [
+    "main.js"
+  ],
+  "initial": [],
+  "async": [
+    "main.js"
+  ],
+  "modules": {
+    "3923e66a": [
+      0
+    ],
+    "362387ae": [
+      0
+    ],
+    "6fbc4fdc": [
+      0
+    ]
+  }
+}
