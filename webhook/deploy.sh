@@ -1,6 +1,6 @@
 #!/bin/bash
 # 网站的根目录
-WEB_PATH='/web/resume'
+WEB_PATH='../web/resume'
  
 echo "start deployment"
 cd $WEB_PATH
