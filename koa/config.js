@@ -21,8 +21,11 @@ module.exports = {
         renew: false,
         sameSite: null,
     },
-    DirectAccess: ['/message', '/api/login', '/socket.io'], // shiro认证 直接访问接口，无需校验登录状态
+    DirectAccess: ['/message', '/api/login', '/socket.io', '/wx'], // shiro认证 直接访问接口，无需校验登录状态
     JWTAccess: ['/api/users/find', '/api/upload/avatar', '/api/tickets', '/api/tickets/add', '/api/tickets/query'], // JWT 验证的接口
     TokenKey: 'authorization', // JWT 认证的Key,
-    secret: 'some secret here'
+    secret: 'some secret here',
+    wx: {
+        Token: 66666666
+    }
 }
