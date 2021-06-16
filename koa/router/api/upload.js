@@ -40,7 +40,7 @@ router.post('/carousel', async ctx => { // 幸运盒首页轮播
     reader.pipe(stream);
     ctx.body = {
         status: 1,
-        message: '头像上传成功！',
+        message: '上传成功！',
         path: `http://${config.host}:${config.port}/carousel/${name}`
     };
 })

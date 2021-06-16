@@ -19,6 +19,8 @@ const ebook = require('./api/ebook.js');
 const address = require('./api/address.js');
 const codegen = require('./api/codegen.js');
 
+const shop = require('./api/shop.js');
+
 // 主页接口
 router.use('/index', index.routes());
 router.use('/render', render.routes());
@@ -39,5 +41,8 @@ router.use('/tickets', tickets.routes());
 router.use('/ebook', ebook.routes());
 router.use('/address', address.routes());
 router.use('/codegen', codegen.routes());
+
+// 业务
+router.use('/shops', shop.routes());
 
 module.exports = router;
